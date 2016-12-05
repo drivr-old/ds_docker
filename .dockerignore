@@ -1,0 +1,6 @@
+# Include files that should not be placed in the docker image
+.DS_Store
+.gitignore
+.git
+README.md
+
