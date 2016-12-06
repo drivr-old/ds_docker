@@ -9,7 +9,7 @@ RUN apt-get clean
 COPY . /scripts
 
 # Install python packages from requirements.txt 
-RUN pip3 install -r requirements.txt
+RUN pip3 install -r /scripts/requirements.txt
 
 # Open ports (make sure these are setup w. sacred + mongodb)
 EXPOSE 8000

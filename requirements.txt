@@ -8,6 +8,7 @@ six==1.10.0
 
 #Data Science related packages
 numpy==1.11.2
-sklearn==0.18.1
+scipy==0.18.1
+scikit-learn==0.18.1
 pandas==0.19.1
 sacred==0.6.10
