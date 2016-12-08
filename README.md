@@ -2,6 +2,7 @@
 
 ### Table of Contents  
 [Recording data from experiments](#Recording data from experiments)   
+[Running MongoDB to record experiments](##Running MongoDB to record experiments)  
 [How to use this image](#How to use this image)  
 [Good practices for dockerfiles](#Good practices for dockerfiles)
 
@@ -36,6 +37,15 @@ Running the script:
 To save the recording to the database.
 
 Also, read the [documentation](http://sacred.readthedocs.io/en/latest/)
+
+<a name="Running MongoDB to record experiments"/>
+#### Running MongoDB to record experiments
+First ensure that Mongo is running:  
+`cat var/log/mongodb/mongod.log`  
+If not, then start it with:  
+`sudo service mongod start`  
+By default, mongo runs localhost and on port 27017.  
+For info on the mongo shell, refer to the [documentation](https://docs.mongodb.com/manual/mongo/)  
 
 <a name="How to use this image"/>
 ### How to use this image:
