@@ -2,14 +2,17 @@
 FROM python:3.5
 
 # Update and clean
-RUN apt-get update
-RUN apt-get clean
+#RUN apt-get update
+#RUN apt-get clean
 
-# Copy current dir into dockerimage /src
+COPY requirements.txt
+RUN pip3 install -r /requirements.txt
+
+# Copy current dir into dockerimage /scripts
 COPY . /scripts
 
 # Install python packages from requirements.txt 
-RUN pip3 install -r /scripts/requirements.txt
+#RUN pip3 install -r /scripts/requirements.txt
 
 # Open ports (make sure these are setup w. sacred + mongodb)
 EXPOSE 8000
