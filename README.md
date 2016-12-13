@@ -2,7 +2,7 @@
 
 ### Table of Contents  
 [Recording data from experiments](#Recording data from experiments)   
-[Running MongoDB to record experiments](##Running MongoDB to record experiments)  
+[Running MongoDB to record experiments](#Running MongoDB to record experiments)  
 [How to use this image](#How to use this image)  
 [Good practices for dockerfiles](#Good practices for dockerfiles)
 
@@ -12,7 +12,7 @@
 We use [Sacred](https://pypi.python.org/pypi/sacred) to record experiments and models and store the results in MongoDB.
 Using Sacred is done through decorators:
 
-```
+```python
 from sacred import Experiment
 from sacred.observers import MongoObserver #To be able to record and store the experiment
 

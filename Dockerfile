@@ -5,14 +5,12 @@ FROM python:3.5
 #RUN apt-get update
 #RUN apt-get clean
 
-COPY requirements.txt /scripts/
-RUN pip3 install -r /scripts/requirements.txt
+# Copy and install reqirements.txt
+COPY requirements.txt /script/
+RUN pip3 install -r /script/requirements.txt
 
-# Copy current dir into dockerimage /scripts
-COPY . /scripts/
-
-# Install python packages from requirements.txt 
-#RUN pip3 install -r /scripts/requirements.txt
+# Copy current dir into dockerimage /script
+COPY . /script/
 
 # Open ports (make sure these are setup w. sacred + mongodb)
 EXPOSE 8000
